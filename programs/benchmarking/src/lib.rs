@@ -259,6 +259,21 @@ pub mod benchmarking {
         msg!("len {}", accounts.len());
         Ok(())
     }
+
+    pub fn test_msg(_ctx: Context<Initialize>) -> ProgramResult {
+        let int_value = 42;
+        let string_value = "42";
+        sol_log_compute_units();
+        msg!("Simple message without variable");
+        sol_log_compute_units();
+        msg!("Simple message with int32 var {}", int_value);
+        sol_log_compute_units();
+        msg!("Simple message with string vq {}", string_value);
+        sol_log_compute_units();
+        msg!("Simple message with 2 var {}, {}", int_value, string_value);
+        sol_log_compute_units();
+        Ok(())
+    }
 }
 
 #[derive(Accounts)]

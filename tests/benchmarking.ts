@@ -34,4 +34,9 @@ describe('benchmarking', () => {
     const tx = await program.rpc.testRawMutableHybridPush({});
     console.log("Your transaction signature", tx);
   });
+  it('6', async () => {
+    // Add your test here.
+    const tx = await program.rpc.testMsg({});
+    console.log("Your transaction signature", tx);
+  });
 });
